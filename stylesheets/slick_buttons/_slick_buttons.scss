@@ -4,7 +4,7 @@
 $btn-color: $app-color; // this will default to the applications base color
 
 // Slick Button Style - creates a base button style for all buttons
-@mixin slick-button($btn-color, $hover: true) {
+@mixin slick-buttons($btn-color, $hover: true) {
   background-color:darken($btn-color, 30%);
   border:1px solid darken($btn-color, 40%);
   color:darken($btn-color, 5%);
