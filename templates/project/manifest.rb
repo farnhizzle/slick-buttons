@@ -1,5 +1,5 @@
 # Make sure you list all the project template files here in the manifest.
-stylesheet '_slick_buttons.sass', :media => 'screen, projection'
+stylesheet '_slickbuttons.sass', :media => 'screen, projection'
 
 description "Slick Buttons"
 
