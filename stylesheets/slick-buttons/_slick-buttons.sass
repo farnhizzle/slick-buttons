@@ -1,38 +1,35 @@
 // Use $app-color as a configurable var in your host project :-)
 // will be working on a contrasting color scheme for bg and color settings within buttons to detect color conflicts
 
-$btn-color: $app-color; // this will default to the applications base color
+$btn-color: $app-color
+
+// this will default to the applications base color
 
 // Slick Button Style - creates a base button style for all buttons
-@mixin slick-buttons($btn-color, $hover: true) {
-  background-color:darken($btn-color, 30%);
-  border:1px solid darken($btn-color, 40%);
-  color:darken($btn-color, 5%);
-  display:block;
-  font-size:1.38em;
+=slick-buttons($btn-color, $hover: true)
+  background-color: darken($btn-color, 30%)
+  border: 1px solid darken($btn-color, 40%)
+  color: darken($btn-color, 5%)
+  display: block
+  font-size: 1.38em
   // margin:0 .5em;
-  margin:0;
-  padding:.25em .5em;
-  text-decoration:none;
-  @include border-radius(.2em);
-  @include box-shadow(darken($btn-color, 60%) 0px 1px 2px, darken($app-grey, 10%) 0px 1px 0px inset);
-  @include background-image(linear-gradient(darken($btn-color, 20%), darken($btn-color, 40%)));
-  @include text-shadow(darken($btn-color, 50%) 0px -1px 0px);
-  @include transition(all .25s ease);
-
+  margin: 0
+  padding: .25em .5em
+  text-decoration: none
+  +border-radius(0.2em)
+  +box-shadow(darken($btn-color, 60%) 0px 1px 2px, darken($app-grey, 10%) 0px 1px 0px inset)
+  +background-image(linear-gradient(darken($btn-color, 20%), darken($btn-color, 40%)))
+  +text-shadow(darken($btn-color, 50%) 0px -1px 0px)
+  +transition(all 0.25s ease)
   // hover state
-  @if $hover {
-    &:hover {
-      background-color:darken($btn-color, 50%);
-      border:1px solid darken($btn-color, 60%);
-      color:lighten($btn-color, 100%);
-      @include box-shadow(darken($btn-color, 40%) 0px 1px 2px, lighten($btn-color, 10%) 0px 1px 0px inset);
-      @include background-image(linear-gradient($btn-color, darken($btn-color, 15%)));
-    }
-    &:active {
-      background-color:darken($btn-color, 60%);
-      @include box-shadow(darken($btn-color, 30%) 0px 1px 5px inset, $btn-color 0px -1px 0px inset);
-      @include background-image(linear-gradient(darken($btn-color, 15%), $btn-color));
-    }
-  }
-}
+  @if $hover
+    &:hover
+      background-color: darken($btn-color, 50%)
+      border: 1px solid darken($btn-color, 60%)
+      color: lighten($btn-color, 100%)
+      +box-shadow(darken($btn-color, 40%) 0px 1px 2px, lighten($btn-color, 10%) 0px 1px 0px inset)
+      +background-image(linear-gradient($btn-color, darken($btn-color, 15%)))
+    &:active
+      background-color: darken($btn-color, 60%)
+      +box-shadow(darken($btn-color, 30%) 0px 1px 5px inset, $btn-color 0px -1px 0px inset)
+      +background-image(linear-gradient(darken($btn-color, 15%), $btn-color))
